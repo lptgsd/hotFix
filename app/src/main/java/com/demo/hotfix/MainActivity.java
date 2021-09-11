@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -17,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView ivImg = findViewById(R.id.ivImg);
+        Button btn_run = findViewById(R.id.btn_run);
+        ivImg.setImageResource(R.mipmap.suolong);
+        btn_run.setText("哈哈哈");
         Log.d("tag", "MainActivity oncreate");
     }
 
