@@ -8,6 +8,10 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+/**
+ * 资源文件 整体替换工具类
+ * 原理：通过反射调用ContextImpl,将mResDir指向新的apk文件
+ */
 public class SourceFixUtils {
     public void fix(Context context,String path){
         File file = new File(path);
@@ -29,9 +33,6 @@ public class SourceFixUtils {
             Method methodGetImpl = contextImpl.getDeclaredMethod("getImpl", Context.class);
             methodGetImpl.setAccessible(true);
             Object objImpl = methodGetImpl.invoke(null,context);
-//            if(objImpl!=null){
-//                Toast.makeText(context,"objImpl不为空：", Toast.LENGTH_SHORT).show();
-//            }
             Object loadedApkObj = mPackageInfo.get(objImpl);
             Field resDir = loadedApkClass.getDeclaredField("mResDir");
             resDir.setAccessible(true);
@@ -40,7 +41,5 @@ public class SourceFixUtils {
         }catch (Exception e){
             Log.e("tags",e.getMessage());
         }
-
-
     }
 }
