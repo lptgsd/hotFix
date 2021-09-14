@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView ivImg = findViewById(R.id.ivImg);
         Button btn_run = findViewById(R.id.btn_run);
         ivImg.setImageResource(R.mipmap.suolong);
-        btn_run.setText("哈哈哈");
+        btn_run.setText("名字修改");
         Log.d("tag", "MainActivity oncreate");
     }
 

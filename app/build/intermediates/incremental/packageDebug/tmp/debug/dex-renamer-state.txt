@@ -1,4 +1,0 @@
-#Thu Sep 09 19:48:24 NOVT 2021
-base.0=D\:\\huojianhua_work\\github\\CustomHotFix\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
